@@ -1,0 +1,11 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'poster/style.css' %}">
+
+<form action="{{ page }}" method="post">
+  {% csrf_token %}
+  {{ form }}
+  <input type="Submit" value="{{ action }}">
+</form>
+
+<a href="{{ index }}"> <button> Return to index </button> </a>

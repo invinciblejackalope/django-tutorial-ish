@@ -1,0 +1,17 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'poster/style.css' %}">
+
+<p> {{ post.text }} - {{ post.author }} (posted {{ post.timestamp }}, last modified {{ post.mod_time }}) </p>
+
+<form action="{% url 'poster:detail' post.id %}" method="post">
+  {% csrf_token %}
+  {{ form }}
+  <input type="Submit" value="Edit">
+</form>
+
+<form action="{% url 'poster:delete' post.id %}" method="post">
+    <input type="submit" value="Delete">
+</form>
+
+<a href="{% url 'poster:index' %}"> <button> Return to index </button> </a>

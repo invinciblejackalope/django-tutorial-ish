@@ -1,0 +1,17 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'poster/style.css' %}">
+
+{% if post_list %}
+    <ul>
+    {% for post in post_list %}
+        <li>
+          <a href="{% url 'poster:detail' post.id %}"> {{ post.text }} - {{ post.author }} </a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Nobody has posted yet.</p>
+{% endif %}
+
+<a href="{% url 'poster:new' %}"> <button> New </button> </a>

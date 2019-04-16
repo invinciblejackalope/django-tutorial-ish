@@ -1,7 +1,59 @@
+/*
+Sources:
+https://stackoverflow.com/questions/17777429/django-static-files-are-not-updated
+https://www.w3schools.com/CSSref/css_colors_legal.asp
+https://stackoverflow.com/questions/4910077/select-all-child-elements-recursively-in-css
+https://stackoverflow.com/questions/147500/is-it-possible-to-include-one-css-file-in-another
+https://www.htmlgoodies.com/tutorials/getting_started/article.php/3479501
+https://stackoverflow.com/questions/13848482/border-does-not-show-up
+*/
+
 body {
+  display: flex;
+  flex-direction: column;
+  background-color: lightskyblue;
   text-align: center;
 }
 
+h1 {
+  margin: 0;
+}
+
 a {
-  color: green;
+  text-decoration: none;
+  color: black;
+}
+
+.center {
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: khaki;
+  padding: 10px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  width: 500px;
+  /* border-color: black;
+  border-width: thin;
+  border-style: solid; */
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.block {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: lightblue;
+}
+
+.center * {
+  margin: 5px;
 }

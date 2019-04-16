@@ -21,9 +21,11 @@ from django.conf.urls.static import static
 urlpatterns = [
     # redirects to poster.urls
     path('', include('poster.urls')),
+    # admin stuff that I haven't messed with
     path('admin/', admin.site.urls),
 ]
 
 # deploy static files
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

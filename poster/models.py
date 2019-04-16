@@ -7,5 +7,6 @@ class Post(models.Model):
     author = models.CharField(max_length=100)
     timestamp = models.DateTimeField('date posted')
     mod_time = models.DateTimeField('date last modified')
+    # what to return if str() is called on a Post object (used for testing)
     def __str__(self):
         return self.values()

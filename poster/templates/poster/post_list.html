@@ -4,15 +4,18 @@
 
 <div class='center'>
   {% if post_list %}
-      <ul>
-      {% for post in post_list %}
-          <li>
-            <a href="{% url 'poster:detail' post.id %}"> {{ post.text }} - {{ post.author }} </a>
-          </li>
-      {% endfor %}
-      </ul>
+    <h1> Latest posts </h1>
+    <div class='list'>
+    {% for post in post_list %}
+        <a href="{% url 'poster:detail' post.id %}">
+          <div class='block'>
+            <p> "{{ post.text }}" - {{ post.author }} </p>
+          </div>
+        </a>
+    {% endfor %}
+    </div>
   {% else %}
-      <p>Nobody has posted yet.</p>
+      <p> Nobody has posted yet. </p>
   {% endif %}
 
   <a href="{% url 'poster:new' %}"> <button> New </button> </a>

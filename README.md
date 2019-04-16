@@ -13,4 +13,5 @@ interesting to model this directly off of the tutorial. Thus, I basically went
 off and created my own thing: a very low functionality forum where people can
 write posts. I used the generic templates and everything that was used in the
 tutorial as well as forms, which we had learned outside of the tutorial for
-Project 1.
+Project 1. I also figured out that my browser cache was preventing me from
+seeing updates to the CSS (which I never got around to figuring out before).

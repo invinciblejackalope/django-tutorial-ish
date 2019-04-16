@@ -3,7 +3,12 @@
 <link rel="stylesheet" type="text/css" href="{% static 'poster/style.css' %}">
 
 <div class='center'>
-  <p> {{ post.text }} - {{ post.author }} (posted {{ post.timestamp }}, last modified {{ post.mod_time }}) </p>
+  <h1> Post detail </h1>
+  <div class='block'>
+    <p> "{{ post.text }}" - {{ post.author }} </p>
+  </div>
+  <p> posted {{ post.timestamp }} </p>
+  <p> last modified {{ post.mod_time }} </p>
 
   <form action="{% url 'poster:detail' post.id %}" method="post">
     {% csrf_token %}
@@ -11,6 +16,7 @@
     <input type="Submit" value="Edit">
   </form>
 
+  <!-- the form here allows me to send a POST request -->
   <form action="{% url 'poster:delete' post.id %}" method="post">
       <input type="submit" value="Delete">
   </form>

@@ -122,5 +122,9 @@ USE_TZ = True
 
 # this is where static files go within apps
 STATIC_URL = '/static/'
+# this is where static files that aren't in any specific app go
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 # this is where collectstatic puts the static files
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

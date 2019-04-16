@@ -3,11 +3,12 @@
 <link rel="stylesheet" type="text/css" href="{% static 'poster/style.css' %}">
 
 <div class='center'>
-<form action="{{ page }}" method="post">
-  {% csrf_token %}
-  {{ form }}
-  <input type="Submit" value="{{ action }}">
-</form>
+  <h1> {{ title }} </h1>
+  <form action="{{ page }}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="Submit" value="{{ action }}">
+  </form>
 
-<a href="{{ index }}"> <button> Return to index </button> </a>
+  <a href="{{ index }}"> <button> Return to index </button> </a>
 </div>

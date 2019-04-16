@@ -42,7 +42,7 @@ def new(request):
     # URLs
     return render(request, 'poster/form_page.html', \
         {'form': form, 'page': reverse('poster:new'), 'action': 'Post', \
-        'index': reverse('poster:index')})
+        'index': reverse('poster:index'), 'title': 'New post'})
 
 
 # the generic DetailView automatically renders poster/post_detail.html with
@@ -50,7 +50,7 @@ def new(request):
 class PostView(generic.DetailView):
     model = Post
 
-    # get_context_data allows one to make variable definitions, like the third
+    # get_context_data allows me to make variable definitions, like the third
     # parameter for render above
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

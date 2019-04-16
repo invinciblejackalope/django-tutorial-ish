@@ -24,7 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-# StackOverflow said to add this to fix a static files issue
-# https://stackoverflow.com/questions/9047054/heroku-handling-static-files-in-django-app
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# deploy static files
+# https://docs.djangoproject.com/en/2.2/howto/static-files/
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

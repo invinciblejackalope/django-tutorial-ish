@@ -2,6 +2,7 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'poster/style.css' %}">
 
+<div class='center'>
 <form action="{{ page }}" method="post">
   {% csrf_token %}
   {{ form }}
@@ -9,3 +10,4 @@
 </form>
 
 <a href="{{ index }}"> <button> Return to index </button> </a>
+</div>
